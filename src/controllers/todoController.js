@@ -1,7 +1,5 @@
 const todo  = require('../models/todoModel');
 
-
-
 const todoGetAll = async (req, res) => {
     const { page } = req.query;
     const limit = 5;
