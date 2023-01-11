@@ -10,7 +10,7 @@ const loginRouter = require('./src/routers/loginRouter');
 //middlewares
 app.use(express.json()); //middleware func. to proccess req json objects
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/api/v1', loginRouter);
 app.use('/api/v1', todoRouter);

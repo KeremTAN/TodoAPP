@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const todoController = require('../controllers/todoController');
-
-router.get('/todo', todoController.todoGetAll);
+const checkToken = require('../../auth');
+router.get('/todo', checkToken, todoController.todoGetAll);
 router.get('/todo/:id', todoController.todoGetById);
 router.post('/todo',todoController.todoAdd);
 router.put('/todo/:id', todoController.todoUpdate);
