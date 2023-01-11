@@ -3,7 +3,7 @@ const todo = require('../models/todoModel');
 
 const todoGetAll = async (req, res) => {
     const { page } = req.query;
-    const limit = 1;
+    const limit = 5;
     const skip = Number(page-1)*limit;
     try {
         const todoGetAll = await todo.find({}).limit(limit).skip(skip);
