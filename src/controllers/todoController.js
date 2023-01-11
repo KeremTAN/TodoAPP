@@ -38,7 +38,6 @@ const todoGetById = async (req, res) => {
 
 const todoAdd = async (req, res) => {
     try {
-        console.log(req.body);
         const todoAdd = new todo(req.body);
         await todoAdd.save()
                     .then(() => {

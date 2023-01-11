@@ -5,7 +5,7 @@ require('dotenv').config();
 require('./src/configs/databaseConnection')
 const port = process.env.PORT || 8000;
 const todoRouter = require('./src/routers/todoRouter');
-const loginRouter = require('./src/routers/loginRouter');
+const loginRouter = require('./src/routers/loginUserRouter');
 
 //middlewares
 app.use(express.json()); //middleware func. to proccess req json objects
