@@ -1,6 +1,7 @@
 const user  = require('../models/loginUserModel');
 const jwt   = require('jsonwebtoken');
 
+
 const todoLogin = async (req, res, next) => {
     const { fullname, nickname, email} = req.body;
     try {
